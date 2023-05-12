@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.7.2/proj4.js"></script>
+    <!--Maoa Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="icon" href=""> <!--Icono en la pestaña-->
+     <!--Estilos CSS-->
+     <link rel="stylesheet" href="./assests/css/style.css">
+     <!--Bootstrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+     <!--JQuery-->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!--Iconos desde Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <h1>Visualizador de Shapefile</h1>
+            <input type="file" id="shapefile-input" accept=".shp">
+            <button onclick="convertToGeoJSON()">Convertir a GeoJSON</button>
+            <button onclick="generatePDF()">Guardar como PDF</button>
+        </section>
+        <section>
+            <div id="map-container">
+                <div id="map"></div>
+                <div id="legend">
+                    <h2>Leyenda</h2>
+                    <ul>
+                        <li><span class="legend-circle" style="background-color: red;"></span> Capa 1</li>
+                        <li><span class="legend-circle" style="background-color: blue;"></span> Capa 2</li>
+                        <li><span class="legend-circle" style="background-color: green;"></span> Capa 3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    <br><!--Salto-->
+    <section>
+        <div class="container">
+                <footer>
+                    <a class="" href="#">
+                        <img src="" alt="" class="logo_esquina">
+                      </a>
+                    <p>Elaborado por Dann LeBeau</p>
+                    <p>Todos los derechos reservados &copy; 2023</p>
+                    <ul class="social-icons">
+                      <li><a href="#"><i class="fab fa-facebook icon"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+                      <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+                      <li><a href="#"><i class="fab fa-github icon"></i></a></li>
+                    </ul>
+                </footer>
+        </div>
+    </section>
+    <!--Biblioteca Leaflet-->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!--Biblioteca que permite leer y procesararchivos shapefile-->
+    <script src="https://unpkg.com/shapefile/dist/shapefile.js"></script>
+   
+    
+    <!--Codigo Javascript-->
+    <script src="./assests/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>  
+</body>
+</html>
